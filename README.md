@@ -6,4 +6,4 @@ Untuk menjalankan
 python.exe kuntilanak.py
 ```
 
-Tunggu sebentar maka program akan membuat folder dna mengclone file random dengan ukuran tertentu
+Tunggu sebentar maka program akan membuat folder & mengclone file random dengan ukuran tertentu

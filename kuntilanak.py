@@ -55,6 +55,7 @@ class zetsu:
                     self.ii += 2
                     dir = rn+str(self.ii)
                     self.tt.append(dir)
+                    self.tt.pop(0)
                     self.lanjut()
             except KeyboardInterrupt:
                 zetsu.main(self.nn, self.ii, self.ff, self.pj, self.yh)

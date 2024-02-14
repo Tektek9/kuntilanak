@@ -48,16 +48,22 @@ class zetsu:
                 rn = ''.join(random.choice(string.ascii_letters) for _ in range(self.pj))
                 try:
                     if self.ii == self.ii:
-                        self.ii += 1
-                        dir = rn+str(self.ii)
-                        self.tt.append(dir)
-                        self.lanjut()
+                        try:
+                            self.ii += 1
+                            dir = rn+str(self.ii)
+                            self.tt.append(dir)
+                            self.lanjut()
+                        except KeyboardInterrupt:
+                            zetsu.main(self.nn, self.ii, self.ff, self.pj, self.yh)
                     elif self.ii <= self.ii:
-                        self.ii += 2
-                        dir = rn+str(self.ii)
-                        self.tt.append(dir)
-                        self.tt.pop(0)
-                        self.lanjut()
+                        try:
+                            self.ii += 2
+                            dir = rn+str(self.ii)
+                            self.tt.append(dir)
+                            self.tt.pop(0)
+                            self.lanjut()
+                        except KeyboardInterrupt:
+                            zetsu.main(self.nn, self.ii, self.ff, self.pj, self.yh)
                 except KeyboardInterrupt:
                     zetsu.main(self.nn, self.ii, self.ff, self.pj, self.yh)
         except KeyboardInterrupt:
